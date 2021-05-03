@@ -21,15 +21,15 @@
 #endif
 
 #if defined(ESP_PLATFORM) || defined(ESP8266) || defined(ARDUINO_AVR_UNO_WIFI_REV2) || defined(ARDUINO_SAMD_MKRWIFI1010) || defined(ARDUINO_SAMD_MKRVIDOR4000) || defined(ARDUINO_SAMD_MKR1000) || defined(ARDUINO_SAMD_NANO_33_IOT)
-#define ARDUINOOSC_ENABLE_WIFI
+// #define ARDUINOOSC_ENABLE_WIFI
 #endif
 
 #if defined(ESP8266) || defined(ESP_PLATFORM) || !defined(ARDUINOOSC_ENABLE_WIFI)
-#define ARDUINOOSC_ENABLE_ETHER
+// #define ARDUINOOSC_ENABLE_ETHER
 #endif
 
 #if !defined(ARDUINOOSC_ENABLE_WIFI) && !defined(ARDUINOOSC_ENABLE_ETHER)
-#error THIS PLATFORM HAS NO WIFI OR ETHERNET OR NOT SUPPORTED ARCHITECTURE. PLEASE LET ME KNOW!
+// #error THIS PLATFORM HAS NO WIFI OR ETHERNET OR NOT SUPPORTED ARCHITECTURE. PLEASE LET ME KNOW!
 #endif
 
 #ifdef ARDUINOOSC_ENABLE_WIFI
@@ -59,6 +59,7 @@
 #include "ArduinoOSC/OscUdpMap.h"
 #include "ArduinoOSC/OSCServer.h"
 #include "ArduinoOSC/OSCClient.h"
+
 
 namespace arduino {
 namespace osc {
